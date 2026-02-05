@@ -51,4 +51,7 @@ footer{
 }
 @media (max-width: 480px) {
   /* mobile styles */
+  ul{
+
+  }
 }
