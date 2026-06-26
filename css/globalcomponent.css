@@ -1,5 +1,28 @@
 /* ===== GLOBAL RESET ===== */
 
+:root{
+
+    --background: #F8F6F1;
+    --surface: #FFFFFF;
+    --surface-soft: #F1EFE8;
+    --stone: #D9D3C7;
+
+    /* ===== BRAND ===== */
+
+    --primarycolor: #6D7844;
+    --primarycolor-hover: #59623A;
+    --primarycolor-light: #B9C78B;
+
+    /* ===== TEXT ===== */
+
+    --text: #252525;
+    --text-light: #6F6F6F;
+
+    /* ===== BORDERS ===== */
+
+    --border: #E6E1D8;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +35,95 @@ html {
 
 body {
     font-family: 'Georgia', serif;
-    background-color: #f6f1ea;
-    color: #4a4036;
+    color: var(--text);
     line-height: 1.8;
     overflow-x: hidden;
-    margin-top: 100px;
+
+    background:
+    linear-gradient(
+        rgba(248, 246, 241, 0.85),
+        rgba(248, 246, 241, 0.85)
+    ),
+    url("../img/terrazzo.png");
+
+    background-repeat: repeat;
+    background-size: auto, 400px;
+    background-attachment: scroll;
 }
+
+/* ===== BUTTONS ===== */
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 30px;
+
+    background: var(--primarycolor);
+    color: var(--surface);
+
+    border: 1px solid var(--primarycolor);
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color .35s ease,
+        border-color .35s ease,
+        color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.primary-button:hover {
+    color: var(--text);
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(89, 98, 58, .18);
+}
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 30px;
+
+    background: transparent;
+    color: var(--primary);
+
+    border: 1px solid var(--primary);
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition:
+        background-color .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+.secondary-button:hover {
+    background: var(--primary);
+    color: var(--surface);
+
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
 
 /* ===== NAVBAR ===== */
 nav {
@@ -59,7 +165,7 @@ nav {
 }
 
 .nav-logo:hover {
-    color: #9caf9f;
+    color: var(--primarycolor-hover);
     letter-spacing: 5px;
 }
 
@@ -104,6 +210,13 @@ nav {
 .nav-links a.active::after {
     width: 100%;
 }
+
+
+
+
+
+
+
 
 /* ===== FOOTER ===== */
 
@@ -228,7 +341,6 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     border-top: 1px solid rgba(255,255,255,0.08);
     padding-top: 25px;
 }
@@ -236,67 +348,4 @@ footer {
 .footer-bottom p {
     font-size: 0.85rem;
     color: #7d7d7d;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
-
-    /* ===== BODY ===== */
-    body {
-        margin-top: 150px;
-    }
-
-    /* ===== NAVBAR ===== */
-    nav {
-        width: calc(100% - 30px);
-        padding: 18px 20px;
-        flex-direction: column;
-        gap: 15px;
-        border-radius: 28px;
-    }
-
-    .nav-links {
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links a {
-        font-size: 0.85rem;
-    }
-
-    /* ===== MOBILE NAVBAR UNDERLINE ===== */
-
-    .nav-links a:hover::after {
-        width: 0;
-    }
-
-    .nav-links a.active::after {
-        width: 100%;
-    }
-
-    /* ==== FOOTER ==== */
-    .footer-container {
-        padding: 60px 25px 30px;
-    }
-
-    .footer-logo {
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .footer-logo p {
-        margin: 0 auto;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 45px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
 }

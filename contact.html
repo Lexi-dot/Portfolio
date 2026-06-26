@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Structiq Studio</title>
         <link rel="stylesheet" href="/css/contact.css">
+        <link rel="stylesheet" href="/css/globalcomponent.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
     <body>
@@ -16,39 +17,52 @@
                     <a href="/">Home</a>
                     <a href="projects.html">Projects</a>
                     <a href="about.html">About</a>
-                    <a href="contact.html" class="nav-cta">Contact</a>
+                    <a href="contact.html" class="active">Contact</a>
                 </div>
             </nav>
         </header>
-        <main>
-            <section>
-                <h2>Welcome,</h2>
-                <p>This is a brief introduction about myself.</p>
+        <main class="contact-page">
+
+            <section class="contact-hero">
+                <p class="section-label">Contact</p>
+                <h1>Let’s design something structured.</h1>
+                <p>
+                    Whether it’s a physical space or a digital experience, Structiq brings clarity, function, and design together.
+                </p>
             </section>
-            <section>
-                <h2>My Projects</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam debitis iure illum ab suscipit incidunt, alias reprehenderit repellat unde libero beatae repellendus fugiat sunt perspiciatis expedita ea itaque hic vitae?</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam debitis iure illum ab suscipit incidunt, alias reprehenderit repellat unde libero beatae repellendus fugiat sunt perspiciatis expedita ea itaque hic vitae?</li>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis provident aspernatur impedit alias laudantium officiis a accusamus, repellendus dignissimos facilis nihil reiciendis quam sequi nisi, quas iste! Ex, expedita!</li>
-                </ul>
+
+            <section class="contact-section">
+
+                <div class="contact-info">
+                    <h2>Start a project</h2>
+                    <p>Have an idea, question, or collaboration in mind?</p>
+
+                    <a href="mailto:contact@structiq.studio">contact@structiq.studio</a>
+                </div>
+
+                <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+
+                    <label>
+                        Name
+                        <input type="text" name="name" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <label>
+                        Message
+                        <textarea name="message" required></textarea>
+                    </label>
+
+                    <button type="submit">Send message</button>
+                </form>
+
             </section>
-                        <section>
-                <h2>My Projects</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam debitis iure illum ab suscipit incidunt, alias reprehenderit repellat unde libero beatae repellendus fugiat sunt perspiciatis expedita ea itaque hic vitae?</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam debitis iure illum ab suscipit incidunt, alias reprehenderit repellat unde libero beatae repellendus fugiat sunt perspiciatis expedita ea itaque hic vitae?</li>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis provident aspernatur impedit alias laudantium officiis a accusamus, repellendus dignissimos facilis nihil reiciendis quam sequi nisi, quas iste! Ex, expedita!</li>
-                </ul>
-            </section>
-                        <section>
-                <h2>My Projects</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam debitis iure illum ab suscipit incidunt, alias reprehenderit repellat unde libero beatae repellendus fugiat sunt perspiciatis expedita ea itaque hic vitae?</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam debitis iure illum ab suscipit incidunt, alias reprehenderit repellat unde libero beatae repellendus fugiat sunt perspiciatis expedita ea itaque hic vitae?</li>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis provident aspernatur impedit alias laudantium officiis a accusamus, repellendus dignissimos facilis nihil reiciendis quam sequi nisi, quas iste! Ex, expedita!</li>
-                </ul>
-            </section>
+
         </main>
         <footer>
             <div class="footer-container">
